@@ -32,9 +32,9 @@ console.log("Sum:", sum);
 
 // b) Use filter to create a new array containing only numbers greater than 3.
 
-const greaterThanThree = null;
-
 // TODO: replace null with your filter expression
+
+const greaterThanThree = numbers.filter((num) => {return num > 3;});
 
 
 
@@ -43,7 +43,7 @@ console.log("Numbers greater than 3:", greaterThanThree);
 
 // c) Use map to create a new array where every number is multiplied by 10.
 
-const multipliedByTen = null;
+const multipliedByTen = numbers.map((num) => {return num * 10});
 
 // TODO: replace null with your map expression
 
