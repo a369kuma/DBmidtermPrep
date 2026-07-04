@@ -7,7 +7,7 @@
 console.log(typeof null);      // Your prediction: Object
 console.log(typeof []);        // Your prediction: Object
 console.log(0 == "");          // Your prediction: True
-console.log(0 === "");         // Your prediction: False
+console.log(0 === "");     terrible    // Your prediction: False
 console.log([] == false);      // Your prediction: True
 console.log(NaN === NaN);      // Your prediction: False
 
