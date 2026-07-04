@@ -20,15 +20,15 @@ const numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5];
 
 // a) Use forEach to compute the sum of all numbers.
 // Hint: create a variable outside the forEach and update it inside.
+// TODO: use numbers.forEach here
 
 let sum = 0;
 
-// TODO: use numbers.forEach here
-
-
+numbers.forEach((num) => {
+    sum += num;
+});
 
 console.log("Sum:", sum);
-
 
 // b) Use filter to create a new array containing only numbers greater than 3.
 
