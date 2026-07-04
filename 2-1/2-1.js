@@ -10,7 +10,7 @@
 
 const score = 72;
 
-let label;
+let label = score >= 50 ? "pass" : "fail";
 
 // Original if/else:
 //
@@ -19,6 +19,8 @@ let label;
 // } else {
 //   label = "fail";
 // }
+
+
 
 // TODO: rewrite the if/else above using a ternary
 // label = ...
@@ -44,6 +46,9 @@ const grades = {
 
 // TODO: write a loop that prints each subject and grade
 
+for (const subject in grades) {
+    console.log(`${subject}: ${grades[subject]}`);
+}
 
 
 
@@ -55,11 +60,14 @@ let count = 0;
 
 // TODO: loop through the grades object and update total and count
 
+for (const subject in grades) {
+    total += grades[subject];
+    count ++
+}
 
 
 
-
-const average = null; // TODO: replace null with total / count
+const average = total/count; // TODO: replace null with total / count
 
 console.log("Average:", average);
 
@@ -89,7 +97,17 @@ console.log("Subjects with grade >= 75:", highGradeSubjects);
 // - otherwise return a / b
 
 function divide(a, b) {
+    if (typeof a !== "number" || typeof b !== "number") {
+        throw new TypeError("Both arguments aren't numbers");
+    }
+
+    if (b === 0) {
+        throw new RangeError("Can't divide by zero.");
+    }
+
+    return a/b;
   // TODO: check if a or b is not a number
+
 
   // TODO: check if b is zero
 
@@ -100,7 +118,7 @@ function divide(a, b) {
 
 try {
   // TODO: call divide with valid numbers
-  const result = null;
+  const result = (10,2);
 
   console.log("Division result:", result);
 } catch (error) {
@@ -109,7 +127,7 @@ try {
 
 try {
   // TODO: call divide with a non-number
-  const result = null;
+  const result = ("10", 2);
 
   console.log("Division result:", result);
 } catch (error) {
@@ -118,7 +136,7 @@ try {
 
 try {
   // TODO: call divide with b as 0
-  const result = null;
+  const result = (10, 0);
 
   console.log("Division result:", result);
 } catch (error) {
