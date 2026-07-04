@@ -78,15 +78,18 @@ console.log("Greater than 3, multiplied by 10:", greaterThanThreeTimesTen);
 // - year
 
 const student = {
-  // TODO: add name
+  name: "Adarsh",
   // TODO: add program
+  program: "Mgmt",
   // TODO: add year
+  year: 2
 };
 
 console.log("Original student:", student);
 
 
 // b) Add a new property called email.
+student.email = "adk2k6@gmail.com";
 
 
 // TODO: add email to the student object
@@ -98,7 +101,7 @@ console.log("Student with email:", student);
 
 // c) Use Object.keys to list the object's property names.
 
-const propertyNames = null;
+const propertyNames = Object.keys(student);
 
 // TODO: replace null with Object.keys(...)
 
@@ -109,7 +112,7 @@ console.log("Property names:", propertyNames);
 
 // d) Convert the student object to a JSON string.
 
-const studentJSON = null;
+const studentJSON = JSON.stringify(student);
 
 // TODO: replace null with JSON.stringify(...)
 
@@ -120,7 +123,7 @@ console.log("JSON string:", studentJSON);
 
 // e) Convert the JSON string back into an object.
 
-const studentBack = null;
+const studentBack = JSON.parse(studentJSON);
 
 // TODO: replace null with JSON.parse(...)
 
@@ -132,8 +135,7 @@ console.log("Converted back to object:", studentBack);
 // f) Verify that the round-trip gives you the same data.
 // Hint: compare JSON.stringify(student) with JSON.stringify(studentBack).
 
-const sameData = null;
-
+console.log("same data?: ", JSON.stringify(student) === JSON.stringify(studentBack));
 // TODO: replace null with your comparison
 
 
@@ -158,7 +160,9 @@ console.log("Same data?", sameData);
 
 // TODO: write the greet function here
 
-
+function greet(name = "Olga", salutation = "Hello") {
+    return `${salutation}, ${name}!`;
+  }
 
 
 // Test it with one argument.
@@ -181,9 +185,9 @@ const x = "outer";
 
 function show() {
   const x = "inner";
-  console.log(x); // Your prediction:
+  console.log(x); // Your prediction: inner
 }
 
 show();
 
-console.log(x); // Your prediction:
+console.log(x); // Your prediction: outer
