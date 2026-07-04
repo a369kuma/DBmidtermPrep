@@ -154,6 +154,13 @@ try {
 // - a speak() method that returns "Some animal sound."
 
 class Animal {
+    constructor(name){
+        this.name = name;
+    }
+
+    speak() {
+        return "Some animal sound.";
+    }
   // TODO: write constructor
 
   // TODO: write speak method
@@ -165,12 +172,14 @@ class Animal {
 // `${this.name} says woof!`
 
 class Dog extends Animal {
-  // TODO: override speak method
+  speak() {
+    return `${this.name} says woof!`;
+  }
 }
 
 // TODO: create a Dog instance
 
-const myDog = null;
+const myDog = new Dog("Buddy");
 
 // TODO: call speak() and print the result
 
@@ -189,7 +198,9 @@ console.log(myDog);
 // makeRow("x", "y", "z")
 
 function makeRow(...cells) {
-  // TODO: return the formatted string
-}
+    return `| ${cells.join(" | ")} |`;
+  }
+  
+  console.log(makeRow("x", "y", "z"));
 
 console.log(makeRow("x", "y", "z"));
