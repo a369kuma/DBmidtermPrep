@@ -4,12 +4,12 @@
 
 // Write your predicted output beside each line before running.
 
-console.log(typeof null);      // Your prediction:
-console.log(typeof []);        // Your prediction:
-console.log(0 == "");          // Your prediction:
-console.log(0 === "");         // Your prediction:
-console.log([] == false);      // Your prediction:
-console.log(NaN === NaN);      // Your prediction:
+console.log(typeof null);      // Your prediction: Object
+console.log(typeof []);        // Your prediction: Object
+console.log(0 == "");          // Your prediction: True
+console.log(0 === "");         // Your prediction: False
+console.log([] == false);      // Your prediction: True
+console.log(NaN === NaN);      // Your prediction: False
 
 
 // ===============================
