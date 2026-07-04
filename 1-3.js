@@ -43,7 +43,7 @@ console.log("Numbers greater than 3:", greaterThanThree);
 
 // c) Use map to create a new array where every number is multiplied by 10.
 
-const multipliedByTen = numbers.map((num) => {return num * 10});
+const multipliedByTen = numbers.map((num) => {return num * 10;});
 
 // TODO: replace null with your map expression
 
@@ -56,7 +56,9 @@ console.log("Multiplied by 10:", multipliedByTen);
 // First keep only numbers greater than 3.
 // Then multiply those numbers by 10.
 
-const greaterThanThreeTimesTen = null;
+const greaterThanThreeTimesTen = numbers
+    .filter((num)=>{return num > 3;})
+    .map((num)=>{return num * 10;});
 
 // TODO: replace null with your chained filter + map expression
 
